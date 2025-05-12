@@ -1,0 +1,24 @@
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.tarjeta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  align-items: center;
+}
