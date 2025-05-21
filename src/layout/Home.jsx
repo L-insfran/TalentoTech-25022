@@ -26,12 +26,14 @@ const Home = ({cart,handleAddToCart}) => {
   if (loading) return <p>Cargando productos...</p>;
 
   return (
-    <>
+    <div style={{ display:"grid", minHeight:"100vh", gridTemplateRows:"auto 1fr auto" }}>
+      <div>
       <Header/>
       <Nav countItem={countItem}/>
+      </div>
       <Main products={productos} addToCart={handleAddToCart} />
       <Footer/>
-    </>
+    </div>
   )
 }
 
