@@ -1,9 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import "./style/Carrito.css";
-
 const Carrito = ({ productos, onEliminarProducto, onVaciarCarrito, onActualizarCantidad, onSeguirComprando }) => {
+
   const calcularTotal = () => {
     return productos.reduce((total, producto) => total + (producto.precio * producto.cantidad), 0);
   };
+
+  const navigate = useNavigate()
+
+
 
   return (
     <div className="carrito-container">
@@ -81,8 +86,13 @@ const Carrito = ({ productos, onEliminarProducto, onVaciarCarrito, onActualizarC
                   Vaciar Carrito
                 </button>
 
-                <button className="btn-comprar">
+                <button className="btn-comprar"
+                 onClick={() => {
+                  navigate("/finalizaCompra" )
+                  }}
+                  >
                   Finalizar Compra →
+                 
                 </button>
                 <button 
                   onClick={onSeguirComprando}

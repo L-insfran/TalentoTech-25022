@@ -4,6 +4,7 @@ import Carrito from '../components/Carrito'
 import Home from '../layout/Home'
 import Acercade from '../pages/Acercade'
 import Contacto from '../pages/ContactForm'
+import FinalizaCompra from '../pages/FinalizaCompra'
 import NotFound from '../pages/NotFound'
 
 const Router1 = () => {
@@ -76,6 +77,9 @@ const Router1 = () => {
           />
         } 
       />
+      <Route 
+        path='/finalizaCompra' 
+        element={<FinalizaCompra />} />
       <Route 
         path='/acerca' 
         element={<Acercade 
