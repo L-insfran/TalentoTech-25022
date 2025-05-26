@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom";
 
 
 const FinalizaCompra = () => {
+  const navigate = useNavigate();
   return (
     <>
-      <h1>Finaliza la compra</h1>
+      <h1>Muchas Gracias por su compra</h1>
+      <button onClick={() => navigate('/')}>Volver a la web</button>
     </>
   )
 }

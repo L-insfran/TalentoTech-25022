@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import Carrito from '../components/Carrito'
+import { UserAutorizadoProvider } from '../context/ContextUser'
 import Home from '../layout/Home'
 import Acercade from '../pages/Acercade'
 import Contacto from '../pages/ContactForm'
 import FinalizaCompra from '../pages/FinalizaCompra'
+import Login from '../pages/Login'
 import NotFound from '../pages/NotFound'
-
+import RutaProtegida from './RutaProtegida'
 const Router1 = () => {
   
   const [cart, setCart] = useState([])
@@ -54,7 +56,9 @@ const Router1 = () => {
   };
 
   return (
+    <UserAutorizadoProvider>
     <Routes>
+      <Route path='/login' element={<Login />} /> 
       <Route 
         path='/' 
         element={
@@ -77,9 +81,14 @@ const Router1 = () => {
           />
         } 
       />
+    
       <Route 
         path='/finalizaCompra' 
-        element={<FinalizaCompra />} />
+        element={
+          <RutaProtegida>
+            <FinalizaCompra />
+          </RutaProtegida>
+        } />
       <Route 
         path='/acerca' 
         element={<Acercade 
@@ -94,6 +103,7 @@ const Router1 = () => {
       path='*'
       element={<NotFound  />} />
     </Routes>
+    </UserAutorizadoProvider>
   )
 }
 

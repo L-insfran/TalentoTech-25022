@@ -1,0 +1,92 @@
+.protected-route-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.access-denied-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.access-denied-icon {
+  color: #dc3545;
+  margin-bottom: 20px;
+}
+
+.access-denied-title {
+  color: #343a40;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.access-denied-message {
+  color: #6c757d;
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.access-denied-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.auth-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.login-button {
+  background-color: #0d6efd;
+  color: white;
+  border: 2px solid #0d6efd;
+}
+
+.login-button:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.register-button {
+  background-color: white;
+  color: #0d6efd;
+  border: 2px solid #0d6efd;
+}
+
+.register-button:hover {
+  background-color: #f8f9fa;
+}
+
+.button-icon {
+  margin-right: 8px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
