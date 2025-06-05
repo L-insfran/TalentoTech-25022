@@ -1,0 +1,124 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Laptop Lenovo",
+      "detalle": "Laptop 15.6'' Ryzen 5, 8GB RAM, 512GB SSD",
+      "precio": 600,
+      "stock": 25,
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_907491-MLA79230205722_092024-F.webp"
+    },
+    {
+      "id": 2,
+      "nombre": "Mouse Logitech",
+      "detalle": "Mouse inalámbrico con sensor óptico",
+      "precio": 25000,
+      "stock": 120,
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_792213-MLU73603366777_122023-O.webp"
+    },
+    {
+    "id": 3,
+    "nombre": "Monitor Samsung",
+    "detalle": "Monitor LED 24'' Full HD",
+    "precio": 225000,
+    "stock": 40,
+    "imagen": "https://http2.mlstatic.com/D_Q_NP_771440-MLA83462094326_042025-R.webp"
+  },
+  {
+    "id": 4,
+    "nombre": "Teclado Redragon",
+    "detalle": "Teclado mecánico retroiluminado RGB",
+    "precio": 54000,
+    "stock": 65,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_903604-MLA75236813871_032024-F.webp"
+  },
+  {
+    "id": 5,
+    "nombre": "Disco SSD Kingston",
+    "detalle": "SSD 480GB SATA3 para alto rendimiento",
+    "precio": 45000,
+    "stock": 80,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_647095-MLU76463784494_052024-F.webp"
+  },
+  {
+    "id": 6,
+    "nombre": "Tablet Samsung Galaxy Tab A7",
+    "detalle": "Pantalla 10.4'', 32GB, Wi-Fi",
+    "precio": 390000,
+    "stock": 30,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_894140-MLU75983008231_042024-F.webp"
+  },
+  {
+    "id": 7,
+    "nombre": "Impresora HP DeskJet",
+    "detalle": "Multifuncional color con Wi-Fi",
+    "precio": 154000,
+    "stock": 20,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_933122-MLU76218997310_052024-F.webp"
+  },
+  {
+    "id": 8,
+    "nombre": "Auriculares JBL Tune",
+    "detalle": "Auriculares inalámbricos con micrófono",
+    "precio": 61500,
+    "stock": 90,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_807170-MLU73785069926_012024-O.webp"
+  },
+  {
+    "id": 9,
+    "nombre": "Webcam Logitech C270",
+    "detalle": "Resolución HD 720p con micrófono integrado",
+    "precio": 38400,
+    "stock": 45,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_600179-MLU72629300879_112023-F.webp"
+  },
+  {
+    "id": 10,
+    "nombre": "Router TP-Link",
+    "detalle": "Router Wi-Fi 300Mbps con 2 antenas",
+    "precio": 19700,
+    "stock": 70,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_603067-MLA80413831864_112024-F.webp"
+  },
+  {
+    "id": 11,
+    "nombre": "Smartphone Xiaomi Redmi Note 12",
+    "detalle": "Pantalla 6.67'', 128GB, 5G",
+    "precio": 850000,
+    "stock": 35,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_964245-MLA82839708242_032025-F.webp"
+  },
+  {
+    "id": 12,
+    "nombre": "Cámara de Seguridad Wi-Fi",
+    "detalle": "Visión nocturna y detección de movimiento",
+    "precio": 78880,
+    "stock": 55,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_654595-MLU75703141912_042024-O.webp"
+  },
+  {
+    "id": 13,
+    "nombre": "Power Bank 20000mAh",
+    "detalle": "Carga rápida para dispositivos móviles",
+    "precio": 34000,
+    "stock": 100,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_844210-MLA73607652829_122023-F.webp"
+  },
+  {
+    "id": 14,
+    "nombre": "Parlante Bluetooth Sony",
+    "detalle": "Resistente al agua, 12h de batería",
+    "precio": 109999,
+    "stock": 50,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_627836-MLA79991557879_102024-F.webp"
+  },
+  {
+    "id": 15,
+    "nombre": "Soporte para Notebook",
+    "detalle": "Ajustable y con ventilación",
+    "precio": 9900,
+    "stock": 75,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_654430-MLU73017153959_112023-F.webp"
+  }
+  ]
+}
