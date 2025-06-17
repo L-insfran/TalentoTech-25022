@@ -1,24 +1,36 @@
-import { createContext, useContext, useState } from 'react';
-// Crear el contexto de autenticación
+import { createContext, useContext, useState, useEffect } from 'react';
+
 const AuthContext = createContext();
+
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
 
+  // Recuperar usuario al cargar la app
+  useEffect(() => {
+    const savedUser = localStorage.getItem('authUser');
+    if (savedUser) {
+      setUser(savedUser);
+    }
+  }, []);
 
   const login = (username) => {
-    // Simulando la creación de un token (en una app real, esto sería generado por un servidor)
     const token = `fake-token-${username}`;
     localStorage.setItem('authToken', token);
+    localStorage.setItem('authUser', username); // guardar también el user
     setUser(username);
   };
+
   const logout = () => {
     localStorage.removeItem('authToken');
+    localStorage.removeItem('authUser');
     setUser(null);
   };
+
   return (
     <AuthContext.Provider value={{ user, login, logout }}>
       {children}
-    </AuthContext.Provider> );
+    </AuthContext.Provider>
+  );
 }
-export const useAuthContext = () => useContext(AuthContext);
 
+export const useAuthContext = () => useContext(AuthContext);

@@ -9,6 +9,7 @@ import { CartProvider } from './context/CartContext';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import ProtectedRoute from './Router/ProtectedRoute';
+import Dashboard from './pages/Dashboard';
 
 function App() {
 
@@ -28,14 +29,14 @@ function App() {
               </ProtectedRoute>
               } /> 
 
-          {/* <Route
+          <Route
             path="/dashboard"
             element={
               <ProtectedRoute>
                 <Dashboard />
               </ProtectedRoute>
             }
-          /> */}
+          />
         </Routes>
       </Router>
       </CartProvider>

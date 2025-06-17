@@ -29,7 +29,11 @@ function Login() {
       if (usuario === 'admin' && password === '1234') {
         login(usuario);
         navigate('/dashboard');
-      } else if (usuario === 'user' && password === '1234') {
+      } else if (usuario === 'leandro' && password === '1234') {
+        login(usuario);
+        navigate('/');
+      }
+       else if (usuario === 'emi' && password === '1234') {
         login(usuario);
         navigate('/');
       }
@@ -137,6 +141,13 @@ function Login() {
                   Procesando...
                 </>
               ) : 'Iniciar sesión'}
+            </button>
+            <button
+              type="button"
+              className="mt-2 w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-blue-600 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              onClick={() => navigate("/")}
+            >
+              volver
             </button>
           </div>
         </form>
