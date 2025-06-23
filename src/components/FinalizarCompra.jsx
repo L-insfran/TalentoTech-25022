@@ -1,7 +1,15 @@
 import { useNavigate } from "react-router-dom";
 
+import { useEffect } from "react";
+import { useCartContext } from "../context/CartContext";
 
 const FinalizaCompra = () => {
+
+  const { VaciarCarrito } = useCartContext();
+
+  useEffect(() => {
+    VaciarCarrito();
+  }, []);
   const navigate = useNavigate();
   return (
     <>

@@ -1,36 +1,42 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-const API_URL = 'https://dummyjson.com/products';
+const API_URL = 'http://localhost:3001/productos';
 
 const ProductManager = () => {
   const [products, setProducts] = useState([]);
-  const [newProductTitle, setNewProductTitle] = useState('');
-  const [newProductPrice, setNewProductPrice] = useState('');
+  const [newProductNombre, setNewProductNombre] = useState('');
+  const [newProductPrecio, setNewProductPrecio] = useState('');
   const [editingProduct, setEditingProduct] = useState(null);
 
   // Obtener productos
   const fetchProducts = async () => {
-    const response = await axios.get(`${API_URL}?limit=10`);
-    setProducts(response.data.products);
+    const response = await axios.get(API_URL);
+    setProducts(response.data);
   };
 
   // Crear producto
   const addProduct = async () => {
-    const response = await axios.post(`${API_URL}/add`, {
-      title: newProductTitle,
-      price: parseFloat(newProductPrice),
+    const response = await axios.post(API_URL, {
+      nombre: newProductNombre,
+      precio: parseFloat(newProductPrecio),
+      detalle: '', // Puedes agregar un input para detalle si lo deseas
+      stock: 0, // Puedes agregar un input para stock si lo deseas
+      imagen: '', // Puedes agregar un input para imagen si lo deseas
     });
     setProducts([...products, response.data]);
-    setNewProductTitle('');
-    setNewProductPrice('');
+    setNewProductNombre('');
+    setNewProductPrecio('');
   };
 
   // Editar producto
   const updateProduct = async () => {
     const response = await axios.put(`${API_URL}/${editingProduct.id}`, {
-      title: editingProduct.title,
-      price: parseFloat(editingProduct.price),
+      nombre: editingProduct.nombre,
+      precio: parseFloat(editingProduct.precio),
+      detalle: editingProduct.detalle || '',
+      stock: editingProduct.stock || 0,
+      imagen: editingProduct.imagen || '',
     });
     setProducts(products.map(p => (p.id === editingProduct.id ? response.data : p)));
     setEditingProduct(null);
@@ -58,22 +64,22 @@ const ProductManager = () => {
           <input
             className="border p-2 rounded flex-1"
             placeholder="Nombre del producto"
-            value={editingProduct ? editingProduct.title : newProductTitle}
+            value={editingProduct ? editingProduct.nombre : newProductNombre}
             onChange={(e) =>
               editingProduct
-                ? setEditingProduct({ ...editingProduct, title: e.target.value })
-                : setNewProductTitle(e.target.value)
+                ? setEditingProduct({ ...editingProduct, nombre: e.target.value })
+                : setNewProductNombre(e.target.value)
             }
           />
           <input
             className="border p-2 rounded w-32"
             type="number"
             placeholder="Precio"
-            value={editingProduct ? editingProduct.price : newProductPrice}
+            value={editingProduct ? editingProduct.precio : newProductPrecio}
             onChange={(e) =>
               editingProduct
-                ? setEditingProduct({ ...editingProduct, price: e.target.value })
-                : setNewProductPrice(e.target.value)
+                ? setEditingProduct({ ...editingProduct, precio: e.target.value })
+                : setNewProductPrecio(e.target.value)
             }
           />
           <button
@@ -102,13 +108,13 @@ const ProductManager = () => {
             className="bg-white rounded-lg shadow hover:shadow-lg transition p-4 flex flex-col"
           >
             <img
-              src={product.thumbnail}
-              alt={product.title}
+              src={product.imagen}
+              alt={product.nombre}
               className="w-full h-48 object-cover rounded mb-3"
             />
-            <h3 className="font-semibold text-lg">{product.title}</h3>
-            <p className="text-gray-600 text-sm mb-1 line-clamp-2">{product.description}</p>
-            <p className="text-black font-bold text-md mb-2">${product.price}</p>
+            <h3 className="font-semibold text-lg">{product.nombre}</h3>
+            <p className="text-gray-600 text-sm mb-1 line-clamp-2">{product.detalle}</p>
+            <p className="text-black font-bold text-md mb-2">${product.precio}</p>
 
             <div className="mt-auto flex gap-2">
               <button

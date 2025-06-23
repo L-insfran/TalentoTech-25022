@@ -1,17 +1,11 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(() => localStorage.getItem('authUser') || null);
 
-  // Recuperar usuario al cargar la app
-  useEffect(() => {
-    const savedUser = localStorage.getItem('authUser');
-    if (savedUser) {
-      setUser(savedUser);
-    }
-  }, []);
+  // Ya no es necesario el useEffect para inicializar user
 
   const login = (username) => {
     const token = `fake-token-${username}`;
