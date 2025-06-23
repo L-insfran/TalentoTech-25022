@@ -1,15 +1,17 @@
-import { Route, BrowserRouter as Router, Routes, useParams } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import Acercade from './pages/Acercade';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Carrito from './components/Carrito';
 import DetalleProducto from './components/DetalleProducto';
 import FinalizaCompra from './components/FinalizarCompra';
 import { CartProvider } from './context/CartContext';
+import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import ProtectedRoute from './Router/ProtectedRoute';
-import Dashboard from './pages/Dashboard';
 
 function App() {
 
@@ -17,6 +19,7 @@ function App() {
     <AuthProvider>
       <CartProvider>
         <Router>
+          <ToastContainer />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path='/about' element={<Acercade />} />

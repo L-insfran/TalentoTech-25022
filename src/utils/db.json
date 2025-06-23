@@ -1,22 +1,6 @@
 {
   "productos": [
     {
-      "id": "1",
-      "nombre": "Laptop Lenovo",
-      "detalle": "Laptop 15.6'' Ryzen 5, 8GB RAM, 512GB SSD",
-      "precio": 600,
-      "stock": 25,
-      "imagen": "https://http2.mlstatic.com/D_NQ_NP_907491-MLA79230205722_092024-F.webp"
-    },
-    {
-      "id": "2",
-      "nombre": "Mouse Logitech",
-      "detalle": "Mouse inalámbrico con sensor óptico",
-      "precio": 25000,
-      "stock": 120,
-      "imagen": "https://http2.mlstatic.com/D_NQ_NP_792213-MLU73603366777_122023-O.webp"
-    },
-    {
       "id": "3",
       "nombre": "Monitor Samsung",
       "detalle": "Monitor LED 24'' Full HD",
@@ -65,44 +49,12 @@
       "imagen": "https://http2.mlstatic.com/D_NQ_NP_807170-MLU73785069926_012024-O.webp"
     },
     {
-      "id": "9",
-      "nombre": "Webcam Logitech C270",
-      "detalle": "Resolución HD 720p con micrófono integrado",
-      "precio": 38400,
-      "stock": 45,
-      "imagen": "https://http2.mlstatic.com/D_NQ_NP_600179-MLU72629300879_112023-F.webp"
-    },
-    {
-      "id": "10",
-      "nombre": "Router TP-Link",
-      "detalle": "Router Wi-Fi 300Mbps con 2 antenas",
-      "precio": 19700,
-      "stock": 70,
-      "imagen": "https://http2.mlstatic.com/D_NQ_NP_603067-MLA80413831864_112024-F.webp"
-    },
-    {
       "id": "11",
       "nombre": "Smartphone Xiaomi Redmi Note 12",
       "detalle": "Pantalla 6.67'', 128GB, 5G",
       "precio": 850000,
       "stock": 35,
       "imagen": "https://http2.mlstatic.com/D_NQ_NP_964245-MLA82839708242_032025-F.webp"
-    },
-    {
-      "id": "12",
-      "nombre": "Cámara de Seguridad Wi-Fi",
-      "detalle": "Visión nocturna y detección de movimiento",
-      "precio": 78880,
-      "stock": 55,
-      "imagen": "https://http2.mlstatic.com/D_NQ_NP_654595-MLU75703141912_042024-O.webp"
-    },
-    {
-      "id": "13",
-      "nombre": "Power Bank 20000mAh",
-      "detalle": "Carga rápida para dispositivos móviles",
-      "precio": 34000,
-      "stock": 100,
-      "imagen": "https://http2.mlstatic.com/D_NQ_NP_844210-MLA73607652829_122023-F.webp"
     }
   ]
 }

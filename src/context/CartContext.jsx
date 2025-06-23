@@ -1,5 +1,6 @@
-import { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import { createContext, useContext, useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 const CartContext = createContext();
 
@@ -36,6 +37,15 @@ export const CartProvider = ({ children }) => {
     }
   
     setCarrito(nuevoCarrito);
+    toast.success(`${item.nombre || item.title} agregado al carrito`, {
+      position: 'top-right',
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
   const VaciarCarrito = () => {
     setCarrito([]);
